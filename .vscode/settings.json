@@ -8,5 +8,10 @@
     // 运行 .py 时以文件所在目录为工作目录，方便读写 dayXX/ 下的相对路径
     "python.terminal.executeInFileDir": true,
     // Notebook 输出的图直接显示，jupyter 的工作目录跟随 notebook 文件
-    "jupyter.notebookFileRoot": "${fileDirname}"
+    "jupyter.notebookFileRoot": "${fileDirname}",
+    // Code Runner（右上角 ▶）：python 直接用 dl 环境的解释器；cpp 照抄用户设置，保证本项目里也能跑 C++
+    "code-runner.executorMap": {
+        "python": "cd \"$dir\" && \"$HOME/miniforge3/envs/dl/bin/python\" -u \"$fileName\"",
+        "cpp": "cd \"$dir\" && /opt/homebrew/bin/g++-15 \"$fileName\" -o \"$fileNameWithoutExt\" -std=gnu++17 -O2 -Wall -DLOCAL && cd \"$workspaceRoot\" && \"$dir$fileNameWithoutExt\""
+    }
 }

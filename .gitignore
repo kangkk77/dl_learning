@@ -28,3 +28,6 @@ __pycache__/
 # 日志 / 系统文件
 runs/
 .DS_Store
+
+# Code Runner 运行选中代码时生成的临时文件
+tempCodeRunnerFile.*
