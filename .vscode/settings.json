@@ -1,0 +1,12 @@
+{
+    // 本项目默认使用 conda 的 dl 环境
+    "python.defaultInterpreterPath": "${userHome}/miniforge3/envs/dl/bin/python",
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python.condaPath": "${userHome}/miniforge3/bin/conda",
+    // 新开集成终端时自动 conda activate dl
+    "python.terminal.activateEnvironment": true,
+    // 运行 .py 时以文件所在目录为工作目录，方便读写 dayXX/ 下的相对路径
+    "python.terminal.executeInFileDir": true,
+    // Notebook 输出的图直接显示，jupyter 的工作目录跟随 notebook 文件
+    "jupyter.notebookFileRoot": "${fileDirname}"
+}
