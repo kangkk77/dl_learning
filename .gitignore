@@ -1,0 +1,30 @@
+# 数据集
+data/
+datasets/
+*.csv
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.tar.gz
+*.zip
+
+# 模型权重 / checkpoint
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 日志 / 系统文件
+runs/
+.DS_Store
